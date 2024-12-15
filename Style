@@ -97,3 +97,160 @@ footer {
   padding: 20px;
   background-color: #111;
   margin-top: 30px;
+/* إعادة ضبط الأساسيات */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* أسلوب الجسم العام */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+  padding: 0;
+  margin: 0;
+}
+
+/* رأس الموقع */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #111;
+}
+
+header .logo img {
+  width: 150px;
+}
+
+/* التنقل العلوي */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* قسم البطاقة الكبيرة (Hero Section) */
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+.cta {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+}
+
+.cta h1 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.cta .btn {
+  background-color: #e60000;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* قسم المنتجات */
+.products {
+  padding: 20px;
+  text-align: center;
+}
+
+.product-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.product {
+  background-color: #333;
+  padding: 15px;
+  width: 200px;
+}
+
+.product img {
+  width: 100%;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #111;
+  margin-top: 30px;
+}
+
+/* Media Queries (الاستجابة للموبايل) */
+@media only screen and (max-width: 768px) {
+  /* تنسيق الرأسي في الهواتف الصغيرة */
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .cta h1 {
+    font-size: 28px;
+  }
+
+  .cta .btn {
+    padding: 8px 16px;
+  }
+
+  .product-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product {
+    width: 90%; /* جعل المنتج يملأ عرض الهاتف */
+    margin-bottom: 20px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* تخصيص لالشاشات الصغيرة جدًا (مثل الهواتف الصغيرة) */
+  header .logo img {
+    width: 120px;
+  }
+
+  .cta h1 {
+    font-size: 24px;
+  }
+
+  .cta .btn {
+    font-size: 14px;
+  }
+
+  .product h3 {
+    font-size: 16px;
+  }
+}
