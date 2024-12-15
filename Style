@@ -247,6 +247,17 @@ footer {
   }
 
   .cta .btn {
+/* تخصيص حجم الصورة في القسم الرئيسي */
+.hero img {
+  width: 100%;
+  height: auto;
+}
+
+/* تخصيص حجم الصور داخل شبكة المنتجات */
+.product img {
+  width: 100%;
+  height: auto;
+}
     font-size: 14px;
   }
 
