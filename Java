@@ -1,0 +1,4 @@
+// Example JavaScript for button click
+document.querySelector('.btn').addEventListener('click', function() {
+  alert('تم إضافة المنتج إلى السلة!');
+})
