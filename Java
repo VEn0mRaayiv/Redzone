@@ -2,3 +2,21 @@
 document.querySelector('.btn').addEventListener('click', function() {
   alert('تم إضافة المنتج إلى السلة!');
 })
+fetch('products.json')
+  .then(response => response.json())
+  .then(products => {
+    const productsContainer = document.querySelector('#products .product-grid');
+    products.forEach(product => {
+      const productHTML = `
+        <div class="product">
+          <img src="${product.image}" alt="${product.name}">
+          <h3>${product.name}</h3>
+          <p>${product.description}</p>
+          <p>Price: $${product.price.toFixed(2)}</p>
+          <button>Add to Cart</button>
+        </div>
+      `;
+      productsContainer.innerHTML += productHTML;
+    });
+  })
+  .catch(error => console.error('Error loading products:', error));
